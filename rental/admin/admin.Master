@@ -1,0 +1,68 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="admin.Master.cs" Inherits="rental.Admin.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="container-fluid" style="font-size:25px; width:100%; background-color:lightcoral;">
+            
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10">
+                        <h1>WELCOME TO DASHBOARD</h1>
+                       
+                    </div>
+                    <div class="col-md-2">
+                        <a href="../defult.aspx">Log-Out</a>
+                    </div>
+                    
+                </div>
+            </div>
+
+          
+            
+        </div>
+       
+          <div class="container-fluid">
+              <div class="row">
+                  <div class="col-md-2" style="background-color:aqua;"> 
+                      <asp:Menu ID="Menu1" runat="server" ForeColor="Black">
+                          <Items>
+                              <asp:MenuItem Text="HOME" Value="HOME" NavigateUrl="~/admin/dashpage.aspx"></asp:MenuItem>
+                              <asp:MenuItem Text="RESULT" Value="RESULT">
+                                  <asp:MenuItem Text="SEMISTER 1" Value="SEMISTER 1"></asp:MenuItem>
+                                  <asp:MenuItem Text="SEMISTER3" Value="SEMISTER3"></asp:MenuItem>
+                                  <asp:MenuItem Text="SEMISTER3" Value="SEMISTER3"></asp:MenuItem>
+                                  </asp:MenuItem>
+                                  <asp:MenuItem Text="SECTION LIST" Value="SECTION LIST"></asp:MenuItem>
+                                  <asp:MenuItem Text="ATTENDENCE" Value="ATTENDENCE"></asp:MenuItem>
+                                  <asp:MenuItem Text="ASSIGNMENTS" Value="ASSIGNMENTS"></asp:MenuItem>
+                                  <asp:MenuItem NavigateUrl="~/admin/dashboard.aspx" Text="STUDENTS" Value="students"></asp:MenuItem>
+                              <asp:MenuItem Text="SPORT WATCH" Value="SPORT WATCH" NavigateUrl="~/admin/sportwatch.aspx"></asp:MenuItem>
+                          </Items>
+                          <StaticMenuItemStyle HorizontalPadding="10px" VerticalPadding="20px" />
+                          <StaticMenuStyle BorderStyle="None" />
+                      </asp:Menu>
+                  </div>
+                  <div class="col-md-10">
+                      <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server"></asp:ContentPlaceHolder>
+                  </div>
+
+
+              </div>
+  </div>
+         <div class="container-fluid" style="background-color:greenyellow;">
+             <div class="container" style="background-color:blue; color:aqua; height120px;">
+
+              </div>
+             </div>
+       
+    </form>
+</body>
+</html>
